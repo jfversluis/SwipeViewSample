@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SwipeViewSample.MainPage">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+        <SwipeView>
+            <SwipeView.LeftItems>
+                <SwipeItems>
+                    <SwipeItem Text="Favorite"
+                       IconImageSource="favorite.png"
+                       BackgroundColor="LightGreen"
+                       Invoked="Favorite_Invoked" />
+                </SwipeItems>
+            </SwipeView.LeftItems>
+            <SwipeView.RightItems>
+                <SwipeItems Mode="Execute">
+                    <SwipeItem Text="Delete"
+                       IconImageSource="delete.png"
+                       BackgroundColor="LightPink"
+                       Invoked="Delete_Invoked" />
+                </SwipeItems>
+            </SwipeView.RightItems>
+            <!-- Content -->
+            <Grid HeightRequest="60" WidthRequest="300" BackgroundColor="LightGray">
+                <Label Text="Welcome to Xamarin.Forms!" HorizontalOptions="Center" VerticalOptions="Center" />
+            </Grid>
+        </SwipeView>
+    </StackLayout>
+</ContentPage>
